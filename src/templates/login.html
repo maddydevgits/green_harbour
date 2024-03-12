@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://wallpaperaccess.com/full/537616.jpg");
+  background-size:130%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+form {
+  border: 3px solid #f1f1f1;
+  max-width: 500px;
+}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius:50px;
+  cursor: pointer;
+  width: 20%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.container1{
+  background-color: #ddd;
+}
+p{
+  color:white;
+}
+
+
+</style>
+</head>
+<body><center>
+  
+  
+
+<h2 style="color:white">Login Form</h2>
+
+
+<form action="/Details" method="post">
+  <div class="container">
+    <label for="phno"><b style="color:white">Contact no</b></label>
+    <input type="text" placeholder="Enter Contact no" name="phno" id="phno" required></br>
+
+    <label for="pwd"><b style="color:white">Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required></br>
+    <input type="checkbox" onclick="myFunction()" >Show Password
+    <script>
+        function myFunction() {
+          var x = document.getElementById("pwd");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script></br>
+  <center><button type="submit">Login</button></center></br>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="pwd" style="color:black">    Dont have an account?<a href="register.html">SIGNUP</a></span>
+  </div>
+  <div class="container1" align="center">
+    <a href="/open" ><b>BACK</b></a>
+  </div>
+  
+</form><h2><span style="color: brown">{{msg}}</span></h2>
+
+
+
+
+</center></body>
+  
+</html>

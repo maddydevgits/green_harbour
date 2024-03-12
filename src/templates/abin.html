@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://wallpaperaccess.com/full/537616.jpg");
+  background-size:130%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+form {
+  border: 3px solid #f1f1f1;
+  max-width: 500px;
+}
+label,h2,a{
+  color:white;
+}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 20%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+</style>
+</head>
+<body><center>
+
+<h2 > Configure Bin Details</h2>
+
+<form action="/configurebin" method="post">
+  <div class="container">
+    <label for="Latitude"><b>Latitude</b></label>
+    <input type="text" placeholder="Enter Latitude" name="lat" id="lat" required></br>
+
+    <label for="Longitude"><b>Longitude</b></label>
+    <input type="text" placeholder="Enter Longitude" name="lon" id="lon" required></br>
+    
+    <label for="Channel Id"><b>Channel Id</b></label>
+    <input type="text" placeholder="Enter Channel Id" name="channelid" id="channelid" required> <br/>
+  <center><button type="submit">Add Bin</button></center></br>
+  <div class="container1" align="center">
+    <a href="/admindashboard" ><b>BACK</b></a>
+  </div>
+</form><h4><span style="color: red">{{msg}}</span></h4>
+
+</center></body>
+  
+</html>

@@ -1,0 +1,109 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<!-- Font Awesome CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+<html>
+  <head>
+    <style>
+      body {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://wallpaperaccess.com/full/537616.jpg");
+        background-size:130%;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+      }
+      .student-profile .card h3 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      a{
+        color:white;
+      }
+    </style>
+  </head>
+    <body>
+      <form action="/profile"  method="post">
+        <div class="container1" align="right">
+          <a href="/dashboard" ><b>BACK</b></a>
+      </div>
+        <div class="student-profile py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                      <h3 class="mb-0"><i class="far fa-clone pr-1"></i>MY PROFILE</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                      <table class="table table-bordered">
+                        <tr> 
+                            <th width="30%">NAME</th>
+                            <td width="2%">:</td>
+                            <td>{{Name}}</td>
+                            
+                        </tr>
+                        <tr>
+                          <th width="30%">Sector</th>
+                          <td width="2%">:</td>
+                          <td>{{Sector}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">Organisation Name</th>
+                          <td width="2%">:</td>
+                          <td>{{Org_name}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">EMAIL</th>
+                          <td width="2%">:</td>
+                          <td>{{email}}</td>
+                        </tr>
+                        <tr>
+                          <th width="30%">PHNO</th>
+                          <td width="2%">:</td>
+                          <td>{{phno}}</td>
+                        </tr>
+                        <tr>
+                            <th width="30%">address</th>
+                            <td width="2%">:</td>
+                            <td>{{address}}</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">No of Tokens</th>
+                            <td width="2%">:</td>
+                            <td>{{no_of_tokens}}</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Latitude</th>
+                            <td width="2%">:</td>
+                            <td>{{latitude}}</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Longitude</th>
+                            <td width="2%">:</td>
+                            <td>{{longitude}}</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Channel Id</th>
+                            <td width="2%">:</td>
+                            <td>{{channelid}}</td>
+                          </tr>
+
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+      
+   
+    </body>
+</html>

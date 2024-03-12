@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.logo_name{
+    align-items:center;
+    padding: 10%;
+}
+.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #0A2558;
+  transition: all 0.5s ease;
+}
+.sidebar.active{
+  width: 60px;
+}
+.sidebar .logo-details{
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logo-details i{
+  font-size: 20px;
+  font-weight: 200;
+  color: #fff;
+  min-width: 60px;
+  text-align: center
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+}
+.sidebar .nav-links{
+  margin-top: 10px;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+.sidebar .nav-links li a.active{
+    background: #081D45;
+}
+.sidebar .nav-links li a:hover{
+    background: #081D45;
+}
+.sidebar .nav-links li i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.sidebar .nav-links li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+.sidebar .nav-links li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: rgb(185, 174, 174);
+}
+.home-section{
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.home-section nav{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: rgb(122, 120, 121);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav{
+  left: 60px;
+  width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+.home-section .home-content{
+  position: relative;
+  padding-top: 80px;
+  background-image: url('');
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+}
+.overview-boxes .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(400% / 4 - 20px);
+  background: #fff;
+  padding: 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.overview-boxes .box-topic{
+  font-size: 25px;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      
+      <span class="logo_name"><b>Green Harbor</b></span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/profile">
+            <i class='bx bx-user'></i>
+            <span class="links_name">Profile</span>
+          </a>
+        </li>
+
+        <li>
+            <a href="bindata.html">
+              <i class='bx bx-menu'></i>
+              <span class="links_name">Bin Data</span>
+            </a>
+         </li>
+
+         <li>
+            <a href="notifications.html">
+              <i class='bx bx-menu'></i>
+              <span class="links_name">Notifications</span>
+            </a>
+         </li>
+
+         <li>
+          <a href="/userTokens">
+            <i class='bx bx-menu'></i>
+            <span class="links_name">Tokens</span>
+          </a>
+       </li>
+       <li>
+        <a href="/transferTokens">
+          <i class="bx bx-menu"></i>
+          <span class="links_name">Transfer Tokens</span>
+        </a>
+       </li>
+        
+        <li class="log_out">
+          <a href="/open" onclick="return confirm('Are you sure you want to Logout?')">
+            <i class='bx bx-log-out'></i>
+            <span class="logout" style="color:white">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="Dashboard">Dashboard</span>
+      </div>
+    </nav>
+    
+    
+     
+      
+      
+      
+      
+      </section>
+
+       
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+        sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      </script>               
+    </body>              
+  </html>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+       
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://wallpaperaccess.com/full/537616.jpg");
+}
+form{
+    background-position: center;
+    padding:0px 50px;
+}
+.overview-boxes .box{
+  display: flex;
+  align-items: center;
+  height:50%;
+  width:30%;
+  background:white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  justify-content:center;
+}
+a{
+  color:white;
+}
+tr {
+  padding:0 30px;
+}
+
+h1{
+  color:green;
+}
+        </style>
+    </head>
+    <body>
+        <form action="/userTokens" method="post">
+            <div class="home-content"> <h1><b style="color:white">TOKENS</b></h1></div>
+                <div class="container" align="right">
+                    <a href="/dashboard" ><b>BACK</b></a>
+                </div>
+        <h2 style="color:white">Total no of tokens : {{sum}}</h2>
+        {% for item in data %}
+        <div class="home-content">
+        <div class="overview-boxes">
+        <div class="box">
+        <div class="right-side">
+          <div class="box-topic"><h1><b>TOKEN</h1></div>
+
+        <div class="container">
+          
+                
+          
+            <tr>
+                <td><h3><b>Bin_id: </b>{{item[0]}}</h3></td>
+            </tr>
+            <tr>
+              <td><h3><b>Bin Weight:</b>{{item[1]}} kg</h3></td>
+          </tr>
+          <tr>
+            <td><h3><b>No of tokens: </b>{{item[2]}}</h3></td>
+          </tr>
+          <tr>
+            <td><h3><b>Worth: </b>{{item[3]}} rupees</h3></td>
+          </tr>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+        {% endfor %}
+      
+    </form>
+  </body>
+</html>

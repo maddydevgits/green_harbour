@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard page</title>
+    <style>
+        #one
+        {
+            height:70px;
+            background-color: rgba(9,9,121);
+        }
+        #t{
+            color:white;
+            margin-top: 20px;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+            margin-right:60px ;
+            border-radius:10px;
+            background-color:transparent;
+        }
+        #two
+        {
+            text-align: center;
+            float: left;
+            width: 27%;
+            height:70px;
+        }
+        #three
+        {
+            text-align: center;
+            float:right;
+            width:55%;
+            height: 70px;
+            line-height:70px;
+        } 
+        .container{
+          height:550px;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://gems.engie.com/wp-content/uploads/2023/02/Why-us-Drive-our-energy-with-us.jpg");
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <h2 id="t">
+                <b> W2E PLANT </b>
+            </h2>
+        </div>
+        <div id="three" >
+            <a href="/userDetails" style="color: white;">USER DETAILS</a>
+            <a href="/binDetails" style="color: white;">FILLED BINS</a>
+            <a href="/open" onclick="return confirm('Are you sure you want to Logout?')">
+              <i class='bx bx-log-out'></i>
+              <span class="logout" style="color:white">Log out</span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+</body>
+</html>
